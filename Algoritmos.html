@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Algoritmos - Pink Aesthetic</title>
+    <link rel="stylesheet" href="Algoritmos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">AlgoritmosGrafos</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+            <li><a href="#" onclick="showSection('analisis')">Análisis</a></li>
+            <li><a href="#" onclick="showSection('grafos')">Grafos</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= INICIO ================= -->
+    <section id="inicio" class="content-section active">
+        <div class="hero">
+            <div class="hero-card modern-hero">
+                <img src="https://lpz.ucb.edu.bo/wp-content/uploads/2021/04/logo-ucb-cuadrado.png" class="main-img">
+                <h1>Análisis de Algoritmos</h1>
+                <p class="subtitle">
+                    Complejidad, eficiencia y optimización de estructuras de datos y grafos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+   <section id="analisis" class="content-section">
+    <div class="container">
+        <h2 class="title">Análisis Profesional de Algoritmos</h2>
+
+        <div class="analysis-grid">
+
+            <!-- COMPLEJIDAD -->
+            <div class="analysis-card">
+                <h3>📊 Complejidad Temporal</h3>
+                <p>
+                    La complejidad temporal mide cuánto tiempo tarda un algoritmo
+                    en ejecutarse en función del tamaño de entrada (n).
+                </p>
+                <ul>
+                    <li><strong>O(1)</strong> – Constante</li>
+                    <li><strong>O(log n)</strong> – Logarítmica</li>
+                    <li><strong>O(n)</strong> – Lineal</li>
+                    <li><strong>O(n log n)</strong> – Lineal-logarítmica</li>
+                    <li><strong>O(n²)</strong> – Cuadrática</li>
+                </ul>
+            </div>
+
+            <!-- COMPLEJIDAD ESPACIAL -->
+            <div class="analysis-card">
+                <h3>💾 Complejidad Espacial</h3>
+                <p>
+                    Evalúa la cantidad de memoria adicional que requiere
+                    un algoritmo para ejecutarse.
+                </p>
+                <p>
+                    Es clave en sistemas con recursos limitados
+                    como dispositivos móviles o sistemas embebidos.
+                </p>
+            </div>
+
+            <!-- ALGORITMOS -->
+            <div class="analysis-card">
+                <h3>🧠 Algoritmos Clásicos en Grafos</h3>
+                <ul>
+                    <li><strong>BFS</strong> – Recorrido en anchura O(V + E)</li>
+                    <li><strong>DFS</strong> – Recorrido en profundidad O(V + E)</li>
+                    <li><strong>Dijkstra</strong> – Camino mínimo</li>
+                    <li><strong>Floyd-Warshall</strong> – Caminos mínimos globales</li>
+                    <li><strong>Kruskal</strong> – Árbol de expansión mínima</li>
+                    <li><strong>Prim</strong> – Árbol mínimo eficiente</li>
+                </ul>
+            </div>
+
+            <!-- APLICACIONES -->
+            <div class="analysis-card">
+                <h3>🌍 Aplicaciones Reales</h3>
+                <p>
+                    • Sistemas GPS y optimización de rutas  
+                    • Redes sociales  
+                    • Telecomunicaciones  
+                    • Inteligencia Artificial  
+                    • Sistemas de transporte  
+                </p>
+            </div>
+
+            <!-- IMAGEN -->
+            <div class="analysis-card image-card">
+                <h3>📈 Ejemplo Visual de Grafo</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/6n-graf.svg"
+                     alt="Grafo ejemplo">
+                <p>Representación de nodos conectados mediante aristas.</p>
+            </div>
+
+            <!-- VIDEO -->
+            <div class="analysis-card video-card">
+                <h3>🎥 Explicación en Video</h3>
+
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/MyAiCtuhiqQ"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section id="grafos" class="content-section">
+        <div class="container">
+            <h2 class="title">Simulador Interactivo</h2>
+
+            <div class="toolbar">
+                <button class="btn btn-clear" onclick="clearCanvas()">Limpiar Todo</button>
+                <button id="btn-mode" class="btn btn-mode" onclick="toggleMode()">Modo: Crear</button>
+            </div>
+
+            <div id="graph-container">
+                <svg id="svg-canvas">
+                    <defs>
+                        <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="21" refY="5" orient="auto">
+                            <path d="M0,0 L10,5 L0,10 Z" fill="#f06292" />
+                        </marker>
+                        <marker id="arrow-black" markerWidth="10" markerHeight="10" refX="21" refY="5" orient="auto">
+                            <path d="M0,0 L10,5 L0,10 Z" fill="#333" />
+                        </marker>
+                    </defs>
+                    <g id="edges-group"></g>
+                </svg>
+                <div id="nodes-layer"></div>
+            </div>
+
+            <p id="hint" class="hint">Click en el fondo blanco para crear un nodo.</p>
+        </div>
+    </section>
+
+    <script src="Algoritmos.js"></script>
+</body>
+</html>
